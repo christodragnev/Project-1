@@ -2,10 +2,71 @@
 #4/4/18
 #tic-tac-toe without graphics
 
-def printBoard():
-    print('|    |     |     |')
+from random import *
+
+a=1
+b=2
+c=3
+d=4
+e=5
+f=6
+g=7
+h=8
+i=9
+
+    
+def printBoard():    #board with numbers as variables (a-i)--> (1-9)
+    print('|  ',a,'  |   ',b,'  |   ',c,'  |')
     print('__________________')
-    print('|    |     |     |')
+    print('|  ',d,'  |   ',e,'  |   ',f,'  |')
     print('__________________')
-    print('|    |     |     |')
+    print('|  ',g,'  |   ',h,'  |   ',i,'  |')
 printBoard()
+
+if __name__ == '__main__':
+    i=0
+    while i < 9: 
+        x = randint(1,9)
+        guess = int(input('Input the number in the place you want chosen: '))
+        if guess == 1:
+            a = 'X'
+            if x == randint(1,9):
+                x ='O'
+            i+=1
+        elif guess == 2:
+            print('X')
+            b = 'X'
+            i+=1
+        elif guess == 3:
+            print('X')
+            c = 'X'
+            i+=1
+        elif guess == 4:
+            print('X')
+            d = 'X'
+            i+=1
+        elif guess == 5:
+            print('X')
+            e = 'X'
+            i+=1
+        elif guess == 6:
+            print('X')
+            f = 'X'
+            i+=1
+        elif guess == 7:
+            print('X')
+            g = 'X'
+            i+=1
+        elif guess == 8:
+            print('X')
+            h = 'X'
+            i+=1
+        elif guess == 9:
+            print('X')
+            i = 'X'
+            i+=1
+
+        printBoard()
+        
+    
+
