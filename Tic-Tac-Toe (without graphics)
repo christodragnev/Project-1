@@ -23,15 +23,15 @@ def printBoard():    #board with numbers as variables (a-i)--> (1-9)
     print('|  ',g,'  |   ',h,'  |   ',i,'  |')
 printBoard()
 
+def isEmpty(box): #checking if box is empty or not
+    
+
 if __name__ == '__main__':
     i=0
     while i < 9: 
-        x = randint(1,9)
         guess = int(input('Input the number in the place you want chosen: '))
         if guess == 1:
             a = 'X'
-            if x == randint(1,9):
-                x ='O'
             i+=1
         elif guess == 2:
             print('X')
@@ -65,7 +65,44 @@ if __name__ == '__main__':
             print('X')
             i = 'X'
             i+=1
-
+       
+       
+        x = randint(1,9)     #opponents turn
+        if x == 1:
+            a = 'O'
+            i+=1
+        elif x == 2:
+            print('O')
+            b = 'O'
+            i+=1
+        elif x == 3:
+            print('O')
+            c = 'O'
+            i+=1
+        elif x == 4:
+            print('O')
+            d = 'O'
+            i+=1
+        elif x == 5:
+            print('O')
+            e = 'O'
+            i+=1
+        elif x == 6:
+            print('O')
+            f = 'O'
+            i+=1
+        elif x == 7:
+            print('O')
+            g = 'O'
+            i+=1
+        elif x == 8:
+            print('O')
+            h = 'O'
+            i+=1
+        elif x == 9:
+            print('O')
+            i = 'O'
+            i+=1
         printBoard()
         
     
