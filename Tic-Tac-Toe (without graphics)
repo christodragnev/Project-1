@@ -23,8 +23,19 @@ def printBoard():    #board with numbers as variables (a-i)--> (1-9)
     print('|  ',g,'  |   ',h,'  |   ',i,'  |')
 printBoard()
 
-def isEmpty(box): #checking if box is empty or not
+def isEmpty(square): #checking if square is empty or not
+    if 'X' not in a or 'X' not in b or 'X' not in c or 'X' not in d or 'X' not in e or 'X' not in f or 'X' not in g or 'X' not in h or 'X' not in i:
+        return True
+    elif 'O' not in a or 'O' not in b or 'O' not in c or 'O' not in d or 'O' not in e or 'O' not in f or 'O' not in g or 'O' not in h or 'O' not in i:
+        return True
+    else: 
+        return False
+def winner():
     
+def fullBoard(): 
+    if 'X' in a and 'O' in a and 'X' in b and 'O' in b and 'X' in c and 'O' in c and 'X' in d and 'O' in d and 'X' in e and 'O' in e and 'X' in f and 'O' in f and 'X' in g and 'O' in g and 'X' in h and 'O' in h and 'X' in i and 'O' in i and   
+
+
 
 if __name__ == '__main__':
     i=0
@@ -104,6 +115,7 @@ if __name__ == '__main__':
             i = 'O'
             i+=1
         printBoard()
+        isEmpty(square)
         
     
 
