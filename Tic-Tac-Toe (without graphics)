@@ -32,7 +32,7 @@ def isEmpty(square): #checking if square is empty or not
         return False
     
 def fullBoard(): 
-    if ('X' in a or 'O' in a) and ('X' in b or 'O' in b) and ('X' in c or 'O' in c) and ('X' in d or 'O' in d) and ('X' in e or 'O' in e) and ('X' in f or 'O' in f) and ('X' in g or 'O' in g) and ('X' in h or 'O' in h) and ('X' in i or 'O' in i):
+    if a!=1 and b!=2 and c!=3 and d!=4 and e!=5 and f!=6 and g!=7 and h!=8 and i!=9:
         return True
 
 
@@ -42,31 +42,22 @@ if __name__ == '__main__':
         guess = int(input('Input the number in the place you want chosen: '))
         if guess == 1:
             a = 'X'
-            j+=1
         elif guess == 2:
             b = 'X'
-    
         elif guess == 3:
             c = 'X'
-            j+=1
         elif guess == 4:
             d = 'X'
-            j+=1
         elif guess == 5:
             e = 'X'
-            j+=1
         elif guess == 6:
             f = 'X'
-            j+=1
         elif guess == 7:
             g = 'X'
-            j+=1
         elif guess == 8:
             h = 'X'
-            j+=1
         elif guess == 9:
             i = 'X'
-            j+=1
        
         if fullBoard():
             break
@@ -74,31 +65,22 @@ if __name__ == '__main__':
         x = randint(1,9)     #opponents turn
         if x == 1:
             a = 'O'
-            j+=1
         elif x == 2:
             b = 'O'
-            j+=1
         elif x == 3:
             c = 'O'
-            j+=1
         elif x == 4:
             d = 'O'
-            j+=1
         elif x == 5:
             e = 'O'
-            j+=1
         elif x == 6:
             f = 'O'
-            j+=1
         elif x == 7:
             g = 'O'
-            j+=1
         elif x == 8:
             h = 'O'
-            j+=1
         elif x == 9:
             i = 'O'
-            j+=1
         printBoard()
         
         
