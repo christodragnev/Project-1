@@ -30,92 +30,76 @@ def isEmpty(square): #checking if square is empty or not
         return True
     else: 
         return False
-def winner():
     
 def fullBoard(): 
-    if 'X' in a and 'O' in a and 'X' in b and 'O' in b and 'X' in c and 'O' in c and 'X' in d and 'O' in d and 'X' in e and 'O' in e and 'X' in f and 'O' in f and 'X' in g and 'O' in g and 'X' in h and 'O' in h and 'X' in i and 'O' in i and   
+    if 'X' in a and 'O' in a and 'X' in b and 'O' in b and 'X' in c and 'O' in c and 'X' in d and 'O' in d and 'X' in e and 'O' in e and 'X' in f and 'O' in f and 'X' in g and 'O' in g and 'X' in h and 'O' in h and 'X' in i and 'O' in i:
+        return True
 
 
 
 if __name__ == '__main__':
-    i=0
-    while i < 9: 
+    j=0
+    while j < 15: 
         guess = int(input('Input the number in the place you want chosen: '))
         if guess == 1:
             a = 'X'
-            i+=1
+            j+=1
         elif guess == 2:
-            print('X')
             b = 'X'
-            i+=1
+            j+=1
         elif guess == 3:
-            print('X')
             c = 'X'
-            i+=1
+            j+=1
         elif guess == 4:
-            print('X')
             d = 'X'
-            i+=1
+            j+=1
         elif guess == 5:
-            print('X')
             e = 'X'
-            i+=1
+            j+=1
         elif guess == 6:
-            print('X')
             f = 'X'
-            i+=1
+            j+=1
         elif guess == 7:
-            print('X')
             g = 'X'
-            i+=1
+            j+=1
         elif guess == 8:
-            print('X')
             h = 'X'
-            i+=1
+            j+=1
         elif guess == 9:
-            print('X')
             i = 'X'
-            i+=1
+            j+=1
        
        
         x = randint(1,9)     #opponents turn
         if x == 1:
             a = 'O'
-            i+=1
+            j+=1
         elif x == 2:
-            print('O')
             b = 'O'
-            i+=1
+            j+=1
         elif x == 3:
-            print('O')
             c = 'O'
-            i+=1
+            j+=1
         elif x == 4:
-            print('O')
             d = 'O'
-            i+=1
+            j+=1
         elif x == 5:
-            print('O')
             e = 'O'
-            i+=1
+            j+=1
         elif x == 6:
-            print('O')
             f = 'O'
-            i+=1
+            j+=1
         elif x == 7:
-            print('O')
             g = 'O'
-            i+=1
+            j+=1
         elif x == 8:
-            print('O')
             h = 'O'
-            i+=1
+            j+=1
         elif x == 9:
-            print('O')
             i = 'O'
-            i+=1
+            j+=1
         printBoard()
-        isEmpty(square)
+        fullBoard()
         
     
 
