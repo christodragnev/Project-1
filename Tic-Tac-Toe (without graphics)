@@ -32,21 +32,20 @@ def isEmpty(square): #checking if square is empty or not
         return False
     
 def fullBoard(): 
-    if 'X' in a and 'O' in a and 'X' in b and 'O' in b and 'X' in c and 'O' in c and 'X' in d and 'O' in d and 'X' in e and 'O' in e and 'X' in f and 'O' in f and 'X' in g and 'O' in g and 'X' in h and 'O' in h and 'X' in i and 'O' in i:
+    if ('X' in a or 'O' in a) and ('X' in b or 'O' in b) and ('X' in c or 'O' in c) and ('X' in d or 'O' in d) and ('X' in e or 'O' in e) and ('X' in f or 'O' in f) and ('X' in g or 'O' in g) and ('X' in h or 'O' in h) and ('X' in i or 'O' in i):
         return True
 
 
 
 if __name__ == '__main__':
-    j=0
-    while j < 15: 
+    while True: 
         guess = int(input('Input the number in the place you want chosen: '))
         if guess == 1:
             a = 'X'
             j+=1
         elif guess == 2:
             b = 'X'
-            j+=1
+    
         elif guess == 3:
             c = 'X'
             j+=1
@@ -69,6 +68,8 @@ if __name__ == '__main__':
             i = 'X'
             j+=1
        
+        if fullBoard():
+            break
        
         x = randint(1,9)     #opponents turn
         if x == 1:
@@ -99,7 +100,7 @@ if __name__ == '__main__':
             i = 'O'
             j+=1
         printBoard()
-        fullBoard()
+        
         
     
 
