@@ -66,6 +66,23 @@ def winner():
         return True
     elif c=='X' and f=='X' and i=='X':
         return True
+        
+    if a=='O' and e=='O' and i=='O':
+        return True
+    elif c=='O' and e=='O' and g=='O':
+        return True
+    elif a=='X' and b=='X' and c=='O':
+        return True
+    elif d=='O' and e=='O' and f=='O':
+        return True
+    elif g=='O' and h=='O' and i=='O':
+        return True
+    elif a=='O' and d=='O' and g=='O':
+        return True
+    elif b=='O' and e=='O' and h=='O':
+        return True
+    elif c=='O' and f=='O' and i=='O':
+        return True
     
 
 
