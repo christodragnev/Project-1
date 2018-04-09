@@ -24,23 +24,23 @@ def printBoard():    #board with numbers as variables (a-i)--> (1-9)
 printBoard()
 
 def isEmpty(square): #checking if square is empty or not #y is the number of the square it's checking
-    if a=='X' or a=='O':
+    if (a=='X' or a=='O') and square==1:
         return False
-    elif b=='X' or b=='O':
+    elif (b=='X' or b=='O') and square==2:
         return False
-    elif c=='X' or c=='O':
+    elif (c=='X' or c=='O') and square==3:
         return False
-    elif d=='X' or d=='O':
+    elif (d=='X' or d=='O') and square==4:
         return False
-    elif e=='X' or e=='O':
+    elif (e=='X' or e=='O') and square==5:
         return False
-    elif f=='X' or f=='O':
+    elif (f=='X' or f=='O') and square==6:
         return False
-    elif g=='X' or g=='O':
+    elif (g=='X' or g=='O') and square==7:
         return False
-    elif h=='X' or h=='O':
+    elif (h=='X' or h=='O') and square==8:
         return False
-    elif i=='X' or i=='O':
+    elif (i=='X' or i=='O') and square==9:
         return False
     else:
         return True
@@ -51,21 +51,21 @@ def fullBoard():
 
 def winner():
     if a=='X' and e=='X' and i=='X':
-        print('User wins!')
+        return True
     elif c=='X' and e=='X' and g=='X':
-        print('User wins!')
+        return True
     elif a=='X' and b=='X' and c=='X':
-        print('User wins!')
+        return True
     elif d=='X' and e=='X' and f=='X':
-        print('User wins!')
+        return True
     elif g=='X' and h=='X' and i=='X':
-        print('User wins!')
+        return True
     elif a=='X' and d=='X' and g=='X':
-        print('User wins!')
+        return True
     elif b=='X' and e=='X' and h=='X':
-        print('User wins!')
+        return True
     elif c=='X' and f=='X' and i=='X':
-        print('User wins!')
+        return True
     
 
 
@@ -95,6 +95,8 @@ if __name__ == '__main__':
             break
        
         x = randint(1,9)     #opponents turn
+        while isEmpty(x)==False:
+            x = randint(1,9)
         if x == 1:
             a = 'O'
         elif x == 2:
@@ -115,9 +117,10 @@ if __name__ == '__main__':
             i = 'O'
         printBoard()
         
-        isEmpty()
+        isEmpty(x)
         
         if winner():
+            print('User wins!!')
             break
          
         
