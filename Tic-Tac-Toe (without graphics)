@@ -23,7 +23,7 @@ def printBoard():    #board with numbers as variables (a-i)--> (1-9)
     print('|  ',g,'  |   ',h,'  |   ',i,'  |')
 printBoard()
 
-def isEmpty(y): #checking if square is empty or not #y is the number of the square it's checking
+def isEmpty(square): #checking if square is empty or not #y is the number of the square it's checking
     if a=='X' or a=='O':
         return False
     elif b=='X' or b=='O':
@@ -116,6 +116,7 @@ if __name__ == '__main__':
         printBoard()
         
         isEmpty()
+        
         if winner():
             break
          
