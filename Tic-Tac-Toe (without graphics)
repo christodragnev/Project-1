@@ -24,17 +24,49 @@ def printBoard():    #board with numbers as variables (a-i)--> (1-9)
 printBoard()
 
 def isEmpty(square): #checking if square is empty or not
-    if 'X' not in a or 'X' not in b or 'X' not in c or 'X' not in d or 'X' not in e or 'X' not in f or 'X' not in g or 'X' not in h or 'X' not in i:
-        return True
-    elif 'O' not in a or 'O' not in b or 'O' not in c or 'O' not in d or 'O' not in e or 'O' not in f or 'O' not in g or 'O' not in h or 'O' not in i:
-        return True
-    else: 
+    if a=='X' or a=='O':
         return False
+    elif b=='X' or b=='O':
+        return False
+    elif c=='X' or c=='O':
+        return False
+    elif d=='X' or d=='O':
+        return False
+    elif e=='X' or e=='O':
+        return False
+    elif f=='X' or f=='O':
+        return False
+    elif g=='X' or g=='O':
+        return False
+    elif h=='X' or h=='O':
+        return False
+    elif i=='X' or i=='O':
+        return False
+    else:
+        return True
     
 def fullBoard(): 
     if a!=1 and b!=2 and c!=3 and d!=4 and e!=5 and f!=6 and g!=7 and h!=8 and i!=9:
         return True
 
+def winner():
+    if a=='X' and e=='X' and i=='X':
+        print('User wins!')
+    elif c=='X' and e=='X' and g=='X':
+        print('User wins!')
+    elif a=='X' and b=='X' and c=='X':
+        print('User wins!')
+    elif d=='X' and e=='X' and f=='X':
+        print('User wins!')
+    elif g=='X' and h=='X' and i=='X':
+        print('User wins!')
+    elif a=='X' and d=='X' and g=='X':
+        print('User wins!')
+    elif b=='X' and e=='X' and h=='X':
+        print('User wins!')
+    elif c=='X' and f=='X' and i=='X':
+        print('User wins!')
+    
 
 
 if __name__ == '__main__':
@@ -82,6 +114,11 @@ if __name__ == '__main__':
         elif x == 9:
             i = 'O'
         printBoard()
+        
+        is
+        if winner():
+            break
+         
         
         
     
