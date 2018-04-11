@@ -110,6 +110,7 @@ if __name__ == '__main__':
        
         if fullBoard():
             break
+            print('It is a tie')
        
         x = randint(1,9)     #opponents turn
         while isEmpty(x)==False:
