@@ -107,6 +107,7 @@ if __name__ == '__main__':
             h = 'X'
         elif guess == 9:
             i = 'X'
+        printBoard()
        
         if fullBoard() == True:
             print('It is a tie!')
