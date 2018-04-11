@@ -71,7 +71,7 @@ def winner():
         return True
     elif c=='O' and e=='O' and g=='O':
         return True
-    elif a=='X' and b=='X' and c=='O':
+    elif a=='O' and b=='O' and c=='O':
         return True
     elif d=='O' and e=='O' and f=='O':
         return True
@@ -137,7 +137,7 @@ if __name__ == '__main__':
         isEmpty(x)
         
         if winner():
-            print('User wins!!')
+            print('We have a winner!!')
             break
          
         
