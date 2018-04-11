@@ -109,6 +109,10 @@ if __name__ == '__main__':
             i = 'X'
         printBoard()
        
+        if winner():
+            print('We have a winner!!')
+            break
+       
         if fullBoard() == True:
             print('It is a tie!')
             break
