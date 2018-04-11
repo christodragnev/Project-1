@@ -23,8 +23,9 @@ def printBoard():    #board with numbers as variables (a-i)--> (1-9)
     print('|  ',g,'  |   ',h,'  |   ',i,'  |')
 printBoard()
 
-def isEmpty(square): #checking if square is empty or not #y is the number of the square it's checking
+def isEmpty(square): #checking if square is empty or not
     if (a=='X' or a=='O') and square==1:
+        
         return False
     elif (b=='X' or b=='O') and square==2:
         return False
@@ -108,9 +109,9 @@ if __name__ == '__main__':
         elif guess == 9:
             i = 'X'
        
-        if fullBoard():
+        if fullBoard() == True:
+            print('It is a tie!')
             break
-            print('It is a tie')
        
         x = randint(1,9)     #opponents turn
         while isEmpty(x)==False:
