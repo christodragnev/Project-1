@@ -25,7 +25,6 @@ printBoard()
 
 def isEmpty(square): #checking if square is empty or not
     if (a=='X' or a=='O') and square==1:
-        
         return False
     elif (b=='X' or b=='O') and square==2:
         return False
