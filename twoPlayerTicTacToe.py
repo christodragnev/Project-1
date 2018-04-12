@@ -14,6 +14,7 @@ g=7
 h=8
 i=9
 
+
     
 def printBoard():    #board with numbers as variables (a-i)--> (1-9)
     print('|  ',a,'  |   ',b,'  |   ',c,'  |')
@@ -108,26 +109,29 @@ if __name__ == '__main__':
         elif guess == 9:
             i = 'X'
         printBoard()
+        if winner():
+            print('We have a winner!!')
+            break
         guess = int(input('Player 2, input the number in the place you want chosen: '))
         if guess == 1:
-            a = 'X'
+            a = 'O'
         elif guess == 2:
-            b = 'X'
+            b = 'O'
         elif guess == 3:
-            c = 'X'
+            c = 'O'
         elif guess == 4:
-            d = 'X'
+            d = 'O'
         elif guess == 5:
-            e = 'X'
+            e = 'O'
         elif guess == 6:
-            f = 'X'
+            f = 'O'
         elif guess == 7:
-            g = 'X'
+            g = 'O'
         elif guess == 8:
-            h = 'X'
+            h = 'O'
         elif guess == 9:
-            i = 'X'
-        printBoard()
+            i = 'O'
+        
        
         if winner():
             print('We have a winner!!')
@@ -139,7 +143,7 @@ if __name__ == '__main__':
        
         printBoard()
         
-        isEmpty(x)
+        isEmpty(guess)
         
         if winner():
             print('We have a winner!!')
