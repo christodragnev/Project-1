@@ -90,7 +90,8 @@ if __name__ == '__main__':
     while True: 
         guess = int(input('Input the number in the place you want chosen: '))
         while isEmpty(guess) != True:
-            guess = int(input('Input the number in the place you want chosen: '))
+            print(' ')
+            guess = int(input('You cannot input the number that has already been chosen, input a different number: '))
         if guess == 1:
             a = 'X'
         elif guess == 2:
