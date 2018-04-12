@@ -14,8 +14,12 @@ g=7
 h=8
 i=9
 
+print('Player 1 goes first and is X')
+print(' ')
+print('Player 2 goes second and is O')
+print(' ')
 
-    
+
 def printBoard():    #board with numbers as variables (a-i)--> (1-9)
     print('|  ',a,'  |   ',b,'  |   ',c,'  |')
     print('__________________')
@@ -89,50 +93,54 @@ def winner():
 
 if __name__ == '__main__':
     while True: 
-        guess = int(input('Player 1, input the number in the place you want chosen: '))
-        if guess == 1:
+        guess1 = int(input('Player 1, input the number in the place you want chosen: '))
+        if guess1 == 1:
             a = 'X'
-        elif guess == 2:
+        elif guess1 == 2:
             b = 'X'
-        elif guess == 3:
+        elif guess1 == 3:
             c = 'X'
-        elif guess == 4:
+        elif guess1 == 4:
             d = 'X'
-        elif guess == 5:
+        elif guess1 == 5:
             e = 'X'
-        elif guess == 6:
+        elif guess1 == 6:
             f = 'X'
-        elif guess == 7:
+        elif guess1 == 7:
             g = 'X'
-        elif guess == 8:
+        elif guess1 == 8:
             h = 'X'
-        elif guess == 9:
+        elif guess1 == 9:
             i = 'X'
         printBoard()
+        isEmpty(guess1)
         if winner():
             print('We have a winner!!')
             break
-        guess = int(input('Player 2, input the number in the place you want chosen: '))
-        if guess == 1:
+        if fullBoard() == True:
+            print('It is a tie!')
+            break
+        guess2 = int(input('Player 2, input the number in the place you want chosen: '))
+        if guess2 == 1:
             a = 'O'
-        elif guess == 2:
+        elif guess2 == 2:
             b = 'O'
-        elif guess == 3:
+        elif guess2 == 3:
             c = 'O'
-        elif guess == 4:
+        elif guess2 == 4:
             d = 'O'
-        elif guess == 5:
+        elif guess2 == 5:
             e = 'O'
-        elif guess == 6:
+        elif guess2 == 6:
             f = 'O'
-        elif guess == 7:
+        elif guess2 == 7:
             g = 'O'
-        elif guess == 8:
+        elif guess2 == 8:
             h = 'O'
-        elif guess == 9:
+        elif guess2 == 9:
             i = 'O'
-        
-       
+        printBoard()
+        isEmpty(guess2)
         if winner():
             print('We have a winner!!')
             break
@@ -141,9 +149,9 @@ if __name__ == '__main__':
             print('It is a tie!')
             break
        
-        printBoard()
         
-        isEmpty(guess)
+        
+        isEmpty(guess2)
         
         if winner():
             print('We have a winner!!')
