@@ -4,6 +4,7 @@
 
 from random import *
 
+#all the variables that correspond with the board below
 a=1
 b=2
 c=3
@@ -45,11 +46,11 @@ def isEmpty(square): #checking if square is empty or not
     else:
         return True
     
-def fullBoard(): 
+def fullBoard():  #function checks whether all the boxes have a number meaning the it's a fullboard
     if a!=1 and b!=2 and c!=3 and d!=4 and e!=5 and f!=6 and g!=7 and h!=8 and i!=9:
         return True
 
-def winner():
+def winner(): #checks the 8 possible ways to win
     if a=='X' and e=='X' and i=='X':
         return True
     elif c=='X' and e=='X' and g=='X':
@@ -87,7 +88,7 @@ def winner():
 
 
 if __name__ == '__main__':
-    while True: 
+    while True:                                         #this is the users turn
         guess = int(input('Input the number in the place you want chosen: '))
         while isEmpty(guess) != True:
             print(' ')
@@ -120,7 +121,7 @@ if __name__ == '__main__':
             print('It is a tie!')
             break
        
-        x = randint(1,9)     #opponents turn
+        x = randint(1,9)                                #opponents turn
         while isEmpty(x)==False:
             x = randint(1,9)
         if x == 1:
@@ -158,4 +159,3 @@ if __name__ == '__main__':
             print('We have a winner!!')
             break
          
-
